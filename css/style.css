@@ -56,10 +56,12 @@ header {
 
 /* Navigation */
 .nav-menu {
+    top:-3%;
     padding: 0;
     display: block;
 }
 .nav-menu * {
+    /* top:35%; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -141,6 +143,7 @@ header {
 /* Home Page  */
 section {
     padding: 100px 10%;
+    margin-top: -10%;
 }
 
 .home {
@@ -301,7 +304,7 @@ section {
 
 .section-rules {
     display: flex;
-    margin-top: 2%;
+    margin-top: 0;
     margin-left: 4.7%;
     width: 100%;
     left: 40%;
@@ -310,10 +313,68 @@ section {
     flex-wrap: wrap;
     grid-gap: 2rem;
 }
+.main-text h2 span{
+    margin-top: -25% !important;
+}
 .section-rules li {
     font-size: 15px;
     color: #918e8e;
 }
 .section-rules li span{
     color: #300eca;
+}
+
+@media (max-width: 966px) {
+    .home h1 {
+        font-size: 2em;
+    }
+    .change-text h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1146px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-menu {
+        position: fixed;
+        top: -38%;
+        left: 0;
+        width: 100%;
+        background: transparent;
+        z-index: 1000;
+    }
+
+    .nav-menu a,
+    .nav-menu a:focus {
+        width: 100%;
+        padding: 10px 18px;
+        text-align: left;
+    }
+
+    .nav-menu a span,
+    .nav-menu a:focus span {
+        display: inline;
+    }
+}
+
+@media (max-width: 890px) {
+    .home-image {
+        display: none;
+    }
+}
+
+@media (max-width: 518px) {
+    .change-text span {
+        overflow: hidden;
+    }
+    .home-content h1 {
+        font-size: 1.5em;
+    }
+    .change-text h3 {
+        font-size: .8em;
+    }
 }
