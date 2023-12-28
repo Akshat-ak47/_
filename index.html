@@ -123,12 +123,21 @@
         </section>
 
         <script>
-            document.getElementById('header').addEventListener('mouseleave', function () {
-                // Hide the navigation when the mouse leaves the header area
-                document.querySelector('.nav-menu').style.opacity = 0;
-                document.querySelector('.nav-menu').style.visibility = 'hidden';
+            var header = document.getElementById('header');
+            var navMenu = document.querySelector('.nav-menu');
+        
+            // Show the navigation when the mouse enters the header area
+            header.addEventListener('mouseenter', function () {
+                navMenu.style.opacity = 1;
+                navMenu.style.visibility = 'visible';
             });
-            </script>
+        
+            // Hide the navigation when the mouse leaves the header area
+            header.addEventListener('mouseleave', function () {
+                navMenu.style.opacity = 0;
+                navMenu.style.visibility = 'hidden';
+            });
+        </script>
 
     <script src="js/script.js"></script>
     </body>
