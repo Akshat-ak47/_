@@ -122,6 +122,14 @@
         </div>
         </section>
 
+        <script>
+            document.getElementById('header').addEventListener('mouseleave', function () {
+                // Hide the navigation when the mouse leaves the header area
+                document.querySelector('.nav-menu').style.opacity = 0;
+                document.querySelector('.nav-menu').style.visibility = 'hidden';
+            });
+            </script>
+
     <script src="js/script.js"></script>
     </body>
 </html>
